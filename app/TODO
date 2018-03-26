@@ -1,0 +1,15 @@
+To be done
+=================
+1.Parsing arguments
+    1.separate options and files ( multiple options as single string can be possible )
+2.Read specified files
+3.Have a results placeholder
+4.Execute option by option and append the result
+
+
+
+
+
+
+Done
+=================
