@@ -9,4 +9,7 @@
   (filter
     (fn [x] (not (.startsWith x "-")))
     elements))
-    
+
+(defn get-first-file [elements]
+  (first
+    (filter-not-option elements)))

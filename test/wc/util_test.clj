@@ -13,3 +13,7 @@
 (deftest filter-not-option-test
   (testing "should return list of arguments which are not option"
     (is (= (filter-not-option '("-abc" "abc" "-a" "a" "b" "-b")) '("abc" "a" "b")))))
+
+(deftest get-first-file-test
+  (testing "should get first file argument in all arguments"
+    (is (= (get-first-file '("-abc" "abc" "-a" "a" "b" "-b")) "abc"))))
