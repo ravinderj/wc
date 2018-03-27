@@ -1,6 +1,6 @@
 (ns wc.util)
 
-(defn isOption
+(defn is-option
   [arg]
   (.startsWith arg "-"))
 

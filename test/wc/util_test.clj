@@ -4,11 +4,11 @@
 
 (deftest is-option-test
   (testing "should pass when argument is an option"
-    (is (isOption "-abc"))))
+    (is (is-option "-abc"))))
 
 (deftest is-option-test
   (testing "should fail when argument is not an option"
-    (is (not (isOption "abc")))))
+    (is (not (is-option "abc")))))
 
 (deftest filter-not-option-test
   (testing "should return list of arguments which are not option"
