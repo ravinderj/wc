@@ -15,5 +15,14 @@
     (is (= (filter-not-option '("-abc" "abc" "-a" "a" "b" "-b")) '("abc" "a" "b")))))
 
 (deftest get-first-file-test
-  (testing "should get first file argument in all arguments"
+  (testing "should get first file argument from all arguments"
     (is (= (get-first-file '("-abc" "abc" "-a" "a" "b" "-b")) "abc"))))
+
+(deftest get-options-test
+  (testing "should get option arguments from all arguments"
+    (is (= (get-options '("-abc" "abc" "-a" "a" "b" "-b")) '("-abc")))))
+
+(deftest get-options-test
+  (testing "should get all option arguments from all arguments"
+    (is (= (get-options '("-abc" "-ab" "-a" "a" "b" "-b")) '("-abc" "-ab" "-a")))))
+    

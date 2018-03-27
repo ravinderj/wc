@@ -13,3 +13,7 @@
 (defn get-first-file [elements]
   (first
     (filter-not-option elements)))
+
+(defn get-options
+  [arguments]
+  (take (.indexOf (vec arguments) (get-first-file arguments)) arguments))
