@@ -18,6 +18,10 @@
   (testing "should get first file argument from all arguments"
     (is (= (get-first-file '("-abc" "abc" "-a" "a" "b" "-b")) "abc"))))
 
+(deftest get-first-file-index-test
+  (testing "should get first file argument index from all arguments"
+    (is (= (get-first-file-index '("-abc" "abc" "-a" "a" "b" "-b")) 1))))
+
 (deftest get-options-test
   (testing "should get option arguments from all arguments"
     (is (= (get-options '("-abc" "abc" "-a" "a" "b" "-b")) '("-abc")))))

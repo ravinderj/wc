@@ -14,10 +14,13 @@
   (first
     (filter-not-option elements)))
 
+(defn get-first-file-index [elements]
+  (.indexOf (vec elements) (get-first-file elements)))
+
 (defn get-options
   [arguments]
-  (take (.indexOf (vec arguments) (get-first-file arguments)) arguments))
+  (take (get-first-file-index arguments) arguments))
 
 (defn get-files
   [arguments]
-  (nthrest arguments (.indexOf (vec arguments) (get-first-file arguments))))
+  (nthrest arguments (get-first-file-index arguments)))
