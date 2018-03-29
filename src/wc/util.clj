@@ -17,3 +17,7 @@
 (defn get-options
   [arguments]
   (take (.indexOf (vec arguments) (get-first-file arguments)) arguments))
+
+(defn get-files
+  [arguments]
+  (nthrest arguments (.indexOf (vec arguments) (get-first-file arguments))))

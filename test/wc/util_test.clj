@@ -25,4 +25,7 @@
 (deftest get-options-test
   (testing "should get all option arguments from all arguments"
     (is (= (get-options '("-abc" "-ab" "-a" "a" "b" "-b")) '("-abc" "-ab" "-a")))))
-    
+
+(deftest get-files-test
+  (testing "should get all file arguments from all arguments"
+    (is (= (get-files '("-abc" "-ab" "-a" "a" "b" "-b")) '("a" "b" "-b")))))
