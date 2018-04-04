@@ -33,3 +33,7 @@
 (deftest get-files-test
   (testing "should get all file arguments from all arguments"
     (is (= (get-files '("-abc" "-ab" "-a" "a" "b" "-b")) '("a" "b" "-b")))))
+
+(deftest read-file-test
+  (testing "should show error message if file is not present"
+    (is (= (read-file "./absent-file.txt") "./absent-file.txt (No such file or directory)"))))
