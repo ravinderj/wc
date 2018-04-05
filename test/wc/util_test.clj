@@ -37,3 +37,8 @@
 (deftest read-file-test
   (testing "should show error message if file is not present"
     (is (= (read-file "./absent-file.txt") "./absent-file.txt (No such file or directory)"))))
+
+(deftest get-number-of-lines-test
+  (testing "should get number of lines in a string"
+  (is (= (get-number-of-lines "hello\nworld\nMy\name\nis\nRavinder") 6))
+  ))
