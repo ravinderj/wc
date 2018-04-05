@@ -44,6 +44,11 @@
   ))
 
 (deftest get-number-of-words-test
-  (testing "should get number of word in a string"
+  (testing "should get number of words in a string"
   (is (= (get-number-of-words "My name is Ravinder") 4))
+  ))
+
+(deftest get-number-of-character-test
+  (testing "should get number of characters in a string"
+  (is (= (get-number-of-characters "My name is Ravinder") 19))
   ))

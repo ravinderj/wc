@@ -42,3 +42,8 @@
   "gives count of words in a string"
   [string]
   (count (clojure.string/split string #" ")))
+
+(defn get-number-of-characters
+  "gives count of characters in a string"
+  [string]
+  (count (clojure.string/split string #"")))
