@@ -47,3 +47,8 @@
   "gives count of characters in a string"
   [string]
   (count (clojure.string/split string #"")))
+
+(defn split-options
+  "gives split options as a set"
+  [options]
+  (set (mapcat (fn [x] (clojure.string/split (subs x 1) #"")) options)))

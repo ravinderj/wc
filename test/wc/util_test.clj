@@ -52,3 +52,8 @@
   (testing "should get number of characters in a string"
   (is (= (get-number-of-characters "My name is Ravinder") 19))
   ))
+
+(deftest split-options-test
+  (testing "should return split options as a set"
+  (is (= (split-options '("-lcm" "-wc")) #{"l" "c" "m" "w"}))
+  ))
