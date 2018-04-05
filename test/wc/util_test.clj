@@ -57,3 +57,13 @@
   (testing "should return split options as a set"
   (is (= (split-options '("-lcm" "-wc")) #{"l" "c" "m" "w"}))
   ))
+(deftest validate-options-positive-case-test
+  (testing "should return true when options are valid"
+  (is (= (validate-options #{"l" "c" "m"}) true))
+  ))
+
+(deftest validate-options-negative-case-test
+  (testing "should throw exception when options are invalid"
+  (is (thrown-with-msg? Exception #"Invalid options"
+    (validate-options #{"l" "d" "m"})))
+  ))

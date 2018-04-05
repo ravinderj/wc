@@ -1,4 +1,5 @@
 (ns wc.util)
+(use 'clojure.set)
 
 (defn is-option
   [arg]
@@ -52,3 +53,10 @@
   "gives split options as a set"
   [options]
   (set (mapcat (fn [x] (clojure.string/split (subs x 1) #"")) options)))
+
+(defn validate-options
+  "returns true if options are valid else throw exception"
+  [options]
+  (if (clojure.set/subset? options #{"l" "c" "m" "w"})
+    true
+    (throw (Exception. "Invalid options"))))
