@@ -37,3 +37,8 @@
   "gives number of lines in a string"
   [string]
   (count (clojure.string/split string #"\n")))
+
+(defn get-number-of-words
+  "gives count of words in a string"
+  [string]
+  (count (clojure.string/split string #" ")))

@@ -40,5 +40,10 @@
 
 (deftest get-number-of-lines-test
   (testing "should get number of lines in a string"
-  (is (= (get-number-of-lines "hello\nworld\nMy\name\nis\nRavinder") 6))
+  (is (= (get-number-of-lines "hello\nworld\nMy\nname\nis\nRavinder") 6))
+  ))
+
+(deftest get-number-of-words-test
+  (testing "should get number of word in a string"
+  (is (= (get-number-of-words "My name is Ravinder") 4))
   ))
