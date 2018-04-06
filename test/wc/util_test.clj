@@ -35,8 +35,9 @@
     (is (= (get-files '("-abc" "-ab" "-a" "a" "b" "-b")) '("a" "b" "-b")))))
 
 (deftest read-file-test
-  (testing "should show error message if file is not present"
-    (is (= (read-file "./absent-file.txt") "./absent-file.txt (No such file or directory)"))))
+  (testing "should throw exception if file is not present"
+    (is (thrown? java.io.FileNotFoundException
+      (read-file "./absent-file.txt")))))
 
 (deftest get-number-of-lines-test
   (testing "should get number of lines in a string"

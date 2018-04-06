@@ -28,11 +28,9 @@
 
 (defn read-file
   [file-path]
-  (try
     (with-open [rdr (clojure.java.io/reader file-path)]
     (clojure.string/join "\n" (reduce conj [] (line-seq rdr)))
-    )
-    (catch Exception e (.getMessage e))))
+    ))
 
 (defn get-number-of-lines
   "gives number of lines in a string"
