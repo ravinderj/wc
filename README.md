@@ -1,5 +1,5 @@
 # word count
-
+[![CircleCI](https://circleci.com/gh/ravinderj/wc.svg?style=svg)](https://circleci.com/gh/ravinderj/wc)
 
 WC(1)                     BSD General Commands Manual                    WC(1)
 
